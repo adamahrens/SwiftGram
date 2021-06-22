@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct SwiftGramApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      MainApp(provider: MainContentProvider(authable: nil))
     }
+  }
 }
