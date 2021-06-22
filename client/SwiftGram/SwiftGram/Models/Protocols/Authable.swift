@@ -9,6 +9,7 @@ import Foundation
 
 protocol Authable: Codable {
   var id: String { get }
-  var email: String { get }
+  var username: String { get }
   var password: String { get }
+  var email: String? { get }
 }

@@ -22,12 +22,13 @@
 		4324EA05268127F500543738 /* MockPostsViewClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA04268127F500543738 /* MockPostsViewClient.swift */; };
 		4324EA0726814EDE00543738 /* LoginSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA0626814EDE00543738 /* LoginSignupView.swift */; };
 		4324EA0A2681683F00543738 /* Authable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA092681683F00543738 /* Authable.swift */; };
-		4324EA0C2681686B00543738 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA0B2681686B00543738 /* UserAuthentication.swift */; };
+		4324EA0C2681686B00543738 /* SignUpAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA0B2681686B00543738 /* SignUpAuthentication.swift */; };
 		4324EA0F26816A6200543738 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA0E26816A6200543738 /* AuthRequest.swift */; };
 		4324EA132681768300543738 /* MainContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA122681768300543738 /* MainContentProvider.swift */; };
 		4324EA16268178BA00543738 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA15268178BA00543738 /* MainApp.swift */; };
 		4324EA1826818A0A00543738 /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1726818A0A00543738 /* LoginSignupViewModel.swift */; };
 		4324EA1A26818AC100543738 /* MockAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1926818AC100543738 /* MockAuthClient.swift */; };
+		4324EA1C26823E7700543738 /* LoginAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1B26823E7700543738 /* LoginAuthentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,12 +49,13 @@
 		4324EA04268127F500543738 /* MockPostsViewClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsViewClient.swift; sourceTree = "<group>"; };
 		4324EA0626814EDE00543738 /* LoginSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupView.swift; sourceTree = "<group>"; };
 		4324EA092681683F00543738 /* Authable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authable.swift; sourceTree = "<group>"; };
-		4324EA0B2681686B00543738 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
+		4324EA0B2681686B00543738 /* SignUpAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAuthentication.swift; sourceTree = "<group>"; };
 		4324EA0E26816A6200543738 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		4324EA122681768300543738 /* MainContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentProvider.swift; sourceTree = "<group>"; };
 		4324EA15268178BA00543738 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		4324EA1726818A0A00543738 /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		4324EA1926818AC100543738 /* MockAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthClient.swift; sourceTree = "<group>"; };
+		4324EA1B26823E7700543738 /* LoginAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				4324E9EF2681173700543738 /* Post.swift */,
-				4324EA0B2681686B00543738 /* UserAuthentication.swift */,
+				4324EA0B2681686B00543738 /* SignUpAuthentication.swift */,
+				4324EA1B26823E7700543738 /* LoginAuthentication.swift */,
 				4324EA0D2681688600543738 /* Protocols */,
 			);
 			path = Models;
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4324EA1826818A0A00543738 /* LoginSignupViewModel.swift in Sources */,
+				4324EA1C26823E7700543738 /* LoginAuthentication.swift in Sources */,
 				4324EA05268127F500543738 /* MockPostsViewClient.swift in Sources */,
 				4324E9F02681173700543738 /* Post.swift in Sources */,
 				4324E9F926811BB700543738 /* Client.swift in Sources */,
@@ -273,7 +277,7 @@
 				4324EA022681259400543738 /* PostsViewModel.swift in Sources */,
 				4324EA0F26816A6200543738 /* AuthRequest.swift in Sources */,
 				4324E9F22681176F00543738 /* Postable.swift in Sources */,
-				4324EA0C2681686B00543738 /* UserAuthentication.swift in Sources */,
+				4324EA0C2681686B00543738 /* SignUpAuthentication.swift in Sources */,
 				4324EA16268178BA00543738 /* MainApp.swift in Sources */,
 				4324EA0A2681683F00543738 /* Authable.swift in Sources */,
 				4324EA1A26818AC100543738 /* MockAuthClient.swift in Sources */,

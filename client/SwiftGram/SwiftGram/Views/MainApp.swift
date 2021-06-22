@@ -16,8 +16,10 @@ struct MainApp: View {
   var body: some View {
     NavigationView {
       provider.mainView()
-    }.onReceive(loginPublisher) { _ in
-      provider.authable = UserAuthentication(id: "123", email: "ada", password: "asdf")
+    }.onReceive(loginPublisher) { notification in
+      if let auth = notification.object as? LoginAuthentication {
+        provider.authable = auth
+      }
     }
     .onReceive(logOutPublisher) { _ in
       provider.authable = nil

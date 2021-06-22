@@ -31,9 +31,7 @@ protocol APIRequest {
 extension APIRequest{
   
   var method: HTTPMethod { .GET }
-  
   var body: Data? { nil }
-  
   var headers: [String : String]?  { nil }
  
   func request(environment: Environment) -> URLRequest {

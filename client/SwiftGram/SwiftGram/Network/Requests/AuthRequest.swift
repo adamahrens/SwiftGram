@@ -13,20 +13,31 @@ extension Notification.Name {
 }
 
 struct LoginRequest: APIRequest {
-  let user: Authable
+  let user: LoginAuthentication
   var path: String = "/user"
+  var body: Data? { try? JSONEncoder().encode(user) }
   
-  func handle(response: Data) throws -> Void {
-    NotificationCenter.default.post(name: .loginNotification, object: nil)
+  func handle(response: Data) throws -> Authable {
+    guard let user = try? JSONDecoder().decode(LoginAuthentication.self, from: response) else {
+      throw APIError.processingFailed(nil)
+    }
+    
+    NotificationCenter.default.post(name: .loginNotification, object: user)
+    return user
   }
 }
 
 struct SignupRequest: APIRequest {
-  let user: UserAuthentication
+  let user: SignUpAuthentication
   var path: String = "/user"
   var body: Data? { try? JSONEncoder().encode(user) }
   
-  func handle(response: Data) throws -> Void {
-    NotificationCenter.default.post(name: .loginNotification, object: nil)
+  func handle(response: Data) throws -> Authable {
+    guard let user = try? JSONDecoder().decode(SignUpAuthentication.self, from: response) else {
+      throw APIError.processingFailed(nil)
+    }
+    
+    NotificationCenter.default.post(name: .loginNotification, object: user)
+    return user
   }
 }

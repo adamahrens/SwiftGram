@@ -10,7 +10,21 @@ import Combine
 
 struct MockAuthClient: APIClient {
   func request<R: APIRequest>(_ request: R) -> AnyPublisher<R.Response, Error> {
-    return Just([1] as! R.Response)
+    let id = UUID()
+    
+    if let _ = request as? LoginRequest {
+      let userAuth = LoginAuthentication(id: id.uuidString, email: nil, username: "ahrens", password: "password123")
+      return Just(Data())
+        .setFailureType(to: Error.self)
+        .tryMap { data -> R.Response in
+          let encoded = try JSONEncoder().encode(userAuth)
+          return try request.handle(response: encoded)
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    let userAuth = SignUpAuthentication(id: id.uuidString, username: "ahrens@email.com", password: "ahrens", email: "password123")
+    return Just(userAuth as! R.Response)
       .setFailureType(to: Error.self)
       .eraseToAnyPublisher()
   }

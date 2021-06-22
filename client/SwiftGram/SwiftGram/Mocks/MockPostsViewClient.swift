@@ -13,7 +13,7 @@ struct MockPostsViewClient: APIClient {
     let posts = [Post(id: UUID(), caption: "1 post ever", createdAt: Date(), photoUrl: URL(string: "https://www.bar.com")!),
                  Post(id: UUID(), caption: "2 post ever", createdAt: Date(), photoUrl: URL(string: "https://www.foo.com")!),
                  Post(id: UUID(), caption: "3 post ever", createdAt: Date(), photoUrl: URL(string: "https://www.foo.com")!)]
-    
+        
     return Just(posts as! R.Response)
       .setFailureType(to: Error.self)
       .eraseToAnyPublisher()

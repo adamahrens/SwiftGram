@@ -37,6 +37,7 @@ struct LoginSignupView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .textContentType(.username)
             .autocapitalization(.none)
+            .disableAutocorrection(true)
           
           Spacer()
           
@@ -53,6 +54,7 @@ struct LoginSignupView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .textContentType(.username)
             .autocapitalization(.none)
+            .disableAutocorrection(true)
           
           Spacer()
           
@@ -62,6 +64,7 @@ struct LoginSignupView: View {
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .textContentType(.emailAddress)
             .autocapitalization(.none)
+            .disableAutocorrection(true)
           
           Spacer()
           
@@ -78,7 +81,7 @@ struct LoginSignupView: View {
       VStack(spacing: 10) {
         Button("Submit") {
           if authState == .login {
-            viewModel.login()
+            viewModel.login(username: userName, password: password)
           } else {
             viewModel.signup()
           }
