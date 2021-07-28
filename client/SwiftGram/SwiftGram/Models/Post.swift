@@ -12,4 +12,6 @@ struct Post: Postable {
   let caption: String
   let createdAt: Date
   let photoUrl: URL
+  let user: User
+  let comments: [Comment]
 }

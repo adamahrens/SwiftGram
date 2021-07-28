@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainApp: View {
   @State var provider: MainContentProviderProtocol
+  @State var authable: Authable? = nil
   
   private let loginPublisher = NotificationCenter.default.publisher(for: .loginNotification).receive(on: RunLoop.main)
   private let logOutPublisher = NotificationCenter.default.publisher(for: .logOutNotification).receive(on: RunLoop.main)
@@ -19,10 +20,12 @@ struct MainApp: View {
     }.onReceive(loginPublisher) { notification in
       if let auth = notification.object as? LoginAuthentication {
         provider.authable = auth
+        authable = auth
       }
     }
     .onReceive(logOutPublisher) { _ in
       provider.authable = nil
+      authable = nil
     }
   }
 }

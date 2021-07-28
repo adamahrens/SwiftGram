@@ -25,6 +25,6 @@ final class MainContentProvider: MainContentProviderProtocol {
   
   func mainView() -> AnyView {
     authable == nil ? AnyView(LoginSignupView(viewModel: LoginSignupViewModel(client: MockAuthClient()))) :
-                      AnyView(PostsView(viewModel: PostsViewModel(client: MockPostsViewClient())))
+                      AnyView(AppTabView())
   }
 }

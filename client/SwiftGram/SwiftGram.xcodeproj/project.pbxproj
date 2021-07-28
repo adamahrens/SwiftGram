@@ -29,6 +29,11 @@
 		4324EA1826818A0A00543738 /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1726818A0A00543738 /* LoginSignupViewModel.swift */; };
 		4324EA1A26818AC100543738 /* MockAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1926818AC100543738 /* MockAuthClient.swift */; };
 		4324EA1C26823E7700543738 /* LoginAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1B26823E7700543738 /* LoginAuthentication.swift */; };
+		4324EA1F26841DAB00543738 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324EA1E26841DAB00543738 /* AppTabView.swift */; };
+		43C4563626B195E600B7F73C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4563526B195E600B7F73C /* PostCell.swift */; };
+		43C4563826B19A8700B7F73C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4563726B19A8700B7F73C /* User.swift */; };
+		43C4563A26B1ACB900B7F73C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4563926B1ACB900B7F73C /* CommentCell.swift */; };
+		43C4563C26B1ACF000B7F73C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4563B26B1ACF000B7F73C /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +61,11 @@
 		4324EA1726818A0A00543738 /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		4324EA1926818AC100543738 /* MockAuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthClient.swift; sourceTree = "<group>"; };
 		4324EA1B26823E7700543738 /* LoginAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthentication.swift; sourceTree = "<group>"; };
+		4324EA1E26841DAB00543738 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		43C4563526B195E600B7F73C /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		43C4563726B19A8700B7F73C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		43C4563926B1ACB900B7F73C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		43C4563B26B1ACF000B7F73C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				4324E9EF2681173700543738 /* Post.swift */,
+				43C4563B26B1ACF000B7F73C /* Comment.swift */,
+				43C4563726B19A8700B7F73C /* User.swift */,
 				4324EA0B2681686B00543738 /* SignUpAuthentication.swift */,
 				4324EA1B26823E7700543738 /* LoginAuthentication.swift */,
 				4324EA0D2681688600543738 /* Protocols */,
@@ -131,6 +143,7 @@
 		4324E9FE2681237A00543738 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4324EA1D26841D6800543738 /* TabView */,
 				4324EA0826814EE800543738 /* Posts */,
 				4324EA14268178A000543738 /* LoginSignUp */,
 				4324EA122681768300543738 /* MainContentProvider.swift */,
@@ -153,6 +166,8 @@
 			children = (
 				4324E9FF2681238A00543738 /* PostsView.swift */,
 				4324EA012681259400543738 /* PostsViewModel.swift */,
+				43C4563526B195E600B7F73C /* PostCell.swift */,
+				43C4563926B1ACB900B7F73C /* CommentCell.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -193,6 +208,14 @@
 				4324EA1726818A0A00543738 /* LoginSignupViewModel.swift */,
 			);
 			path = LoginSignUp;
+			sourceTree = "<group>";
+		};
+		4324EA1D26841D6800543738 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				4324EA1E26841DAB00543738 /* AppTabView.swift */,
+			);
+			path = TabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,11 +291,13 @@
 				4324EA1C26823E7700543738 /* LoginAuthentication.swift in Sources */,
 				4324EA05268127F500543738 /* MockPostsViewClient.swift in Sources */,
 				4324E9F02681173700543738 /* Post.swift in Sources */,
+				4324EA1F26841DAB00543738 /* AppTabView.swift in Sources */,
 				4324E9F926811BB700543738 /* Client.swift in Sources */,
 				4324E9F72681186F00543738 /* PostRequest.swift in Sources */,
 				4324E9FB26811BC500543738 /* APIClient.swift in Sources */,
 				4324E9E0268116D500543738 /* SwiftGramApp.swift in Sources */,
 				4324EA0726814EDE00543738 /* LoginSignupView.swift in Sources */,
+				43C4563C26B1ACF000B7F73C /* Comment.swift in Sources */,
 				4324E9F5268117F900543738 /* APIRequest.swift in Sources */,
 				4324EA022681259400543738 /* PostsViewModel.swift in Sources */,
 				4324EA0F26816A6200543738 /* AuthRequest.swift in Sources */,
@@ -282,8 +307,11 @@
 				4324EA0A2681683F00543738 /* Authable.swift in Sources */,
 				4324EA1A26818AC100543738 /* MockAuthClient.swift in Sources */,
 				4324E9FD26811DDC00543738 /* APIEnvironment.swift in Sources */,
+				43C4563626B195E600B7F73C /* PostCell.swift in Sources */,
 				4324EA002681238A00543738 /* PostsView.swift in Sources */,
 				4324EA132681768300543738 /* MainContentProvider.swift in Sources */,
+				43C4563826B19A8700B7F73C /* User.swift in Sources */,
+				43C4563A26B1ACB900B7F73C /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

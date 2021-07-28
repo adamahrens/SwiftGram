@@ -83,7 +83,7 @@ struct LoginSignupView: View {
           if authState == .login {
             viewModel.login(username: userName, password: password)
           } else {
-            viewModel.signup()
+            viewModel.signup(username: userName, password: password)
           }
         }
         .frame(width: 300, height: 64, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

@@ -9,13 +9,19 @@ import SwiftUI
 import Combine
 
 struct PostsView: View {
-  let viewModel: PostsViewModel
+  @ObservedObject var viewModel: PostsViewModel
   
   var body: some View {
-    List(viewModel.posts, id: \.id) { post in
-      Text(post.caption)
+    VStack(alignment: .leading) {
+      Text("SwiftGram")
+        .font(.title)
+        .fontWeight(.semibold)
+        .foregroundColor(.accentColor)
+        .padding(.leading, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+      List(viewModel.posts, id: \.id) { post in
+        PostCell(post: post)
+      }
     }
-    .navigationTitle("SwiftGram")
   }
 }
 

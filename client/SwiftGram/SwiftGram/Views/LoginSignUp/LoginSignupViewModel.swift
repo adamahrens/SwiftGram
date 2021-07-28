@@ -35,7 +35,12 @@ final class LoginSignupViewModel {
     }.store(in: &cancellables)
   }
   
-  func signup() {
-    
+  func signup(username: String, password: String) {
+    let signup = SignUpAuthentication(id: UUID().uuidString, username: username, password: password, email: nil)
+    client.request(SignupRequest(user: signup)).sink { result in
+      print("Signup request \(result)")
+    } receiveValue: { value in
+      print("Logged in \(value)")
+    }.store(in: &cancellables)
   }
 }

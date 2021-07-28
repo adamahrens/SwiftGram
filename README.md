@@ -21,3 +21,18 @@ Help define what we want to build. It describes a feature/ or use case for the U
 # Priority
 
 Go over the list of User Stories to determine the priority. What needs to be done now, next week, in the future. P0 Must have, P1 Should Have P2 Nice to Have
+
+# Technical Decisions
+
+Firebase vs Server Side Swift? Weight the pros/cons more/less control. UIKit vs SwiftUI.
+
+# Architecture
+
+Caching system? Image compression? Machine learning? Abstractions has a cost ( You Arent Going to Need It) so don't build it.
+
+- Vapor w/ PostgreSQL
+- Swift Package Manager
+- Combine & URLSession
+- Notifications
+- AVFoundation & Core Image
+
